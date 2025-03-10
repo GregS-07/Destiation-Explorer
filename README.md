@@ -12,7 +12,7 @@
 - Responsive design was implemented as it is a factor in certain search engines.
 
 ### Dynamic Data Fetching
-I used CraftCMS to handle the attraction entries and fetch these entries in order to display them. This ensured that the site was flexible and stayed current as  attractions are being managed.
+I used CraftCMS to handle the attraction entries and fetch these entries in order to display them. This ensured that the site was flexible and stayed current as attractions are being managed.
 
 ### Handling Filtering In JQuery
 I decided to handle the filtering logic locally rather than using fetching the specific attractions directly from CraftCMS. 
