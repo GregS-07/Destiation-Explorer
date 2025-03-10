@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="destination explorer, Local Town, Local Town attractions, day out">
+    <meta name="description" content="Explore attractions in Local Town, from historical monuments to a relaxing walk along the riverside. Something to do for everyone.">
+    <meta name="author" content="Local Town">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> 
+    </script>
+    <title></title>
+</head>
+<body class="w-screen h-screen bg-teal-100 overflow-x-hidden">
+    <nav class="h-fit flex flex-row bg-teal-500 text-white justify-around items-center py-5">
+        
+        {# Desktop menu #}
+        <p class="text-2xl hidden md:flex cursor-default"> <span class="border-t-4 border-t-lime-500 border-b-4 border-b-blue-500">Local</span> <span class="border-b-4 border-b-lime-500 border-t-4 border-t-blue-500">Town</span>™</p>
+        <div class="hidden md:flex nav-link flex flex-row justify-around items-center w-[60%]">
+            <a class="hover:text-stone-200 transition text-lg" href="">Home</a>
+            <a class="hover:text-stone-200 transition text-lg" href="">About</a>
+            <a class="hover:text-stone-200 transition text-lg" href="">Contact</a>
+            <a href="" class="bg-lime-500 p-3 rounded-xl hover:bg-lime-600 transition">Destination Explorer</a>
+        </div>
+
+        {# Mobile menu #}
+        <div class="mobile-menu md:hidden min-h-[75px] ">
+            <img class="menu-btn w-[75px] absolute left-7 md:hidden" src="{{ alias('@web') }}/assets/images/menu.png" alt="Menu toggle button">
+            <div class="nav-links flex flex-col justify-around gap-3 items-center mt-[75px]">
+                <a class="hover:text-stone-200 transition text-lg" href="">Home</a>
+                <a class="hover:text-stone-200 transition text-lg" href="">About</a>
+                <a class="hover:text-stone-200 transition text-lg" href="">Contact</a>
+                <a href="/destination-explorer" class="bg-lime-500 p-3 rounded-xl hover:bg-lime-600 transition">Destination Explorer</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        {% block content %}
+
+        {# component is loaded here #}
+        
+        {% endblock %}
+    </main>
+    <footer class="flex justify-start items-center gap-[20px] pb-3 pl-3 mt-15">
+        <p class="text-2xl cursor-default"> <span class="border-t-4 border-t-lime-500 border-b-4 border-b-blue-500">Local</span> <span class="border-b-4 border-b-lime-500 border-t-4 border-t-blue-500">Town</span>™</p>
+        <p>Local Town 2025 ©</p> 
+    </footer>
+
+    {# <script src="{{ alias('@web') }}/assets/js/script.js"></script> #}
+
+</body>
+
+<script>
+    $(document).ready(() => {
+        let selectedCategories = [];
+
+        // Toggle mobile menu 
+        $(".menu-btn").on("click", () => {
+            $(".nav-links").slideToggle("slow");
+        });
+
+        $(".category-filter").on("click", function () {
+
+            // Toggle filter styles
+            $(this).toggleClass("border-transparent border-black");
+        
+            let selectedCategory = $(this).data("category").toString();
+        
+            if(selectedCategories.includes(selectedCategory)) {
+                // If already selected, remove it
+                selectedCategories = selectedCategories.filter(cat => cat !== selectedCategory);
+            }else {
+                // If not selected, add it
+                selectedCategories.push(selectedCategory);
+            }
+
+            // If selected categories empty, show all attractions
+            if (!selectedCategories.length) {
+                $(".card").show();
+                return;
+            }
+
+            // Display/hide selected categories
+            $(".card").each(function () {
+                let categories = $(this).data("category").toString().split(",");
+
+                if(categories.some(cat => selectedCategories.includes(cat))) {
+                    $(this).show();
+                    
+                }else {
+                    $(this).hide();
+                }
+            });
+        });
+
+        // Create attraction modal on click
+        $(".card").on("click", function(){
+            let attractionTitle = $(this).data("title");
+            let formatedAttractionTitle = attractionTitle.split(' ').join(''); // Remove spaces from title so titles with spaces are still treated as one class
+            $(".modal-"+formatedAttractionTitle).fadeIn(1000);
+        });
+
+        $(".cross").on("click", () => {
+            $(".modal").fadeOut(1000);
+        });
+
+    });
+</script>
+</html>
