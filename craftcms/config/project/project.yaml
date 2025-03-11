@@ -1,0 +1,85 @@
+dateModified: 1741553897
+elementSources:
+  craft\elements\Category:
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: true
+      key: 'group:1befa042-9ee8-465d-aea6-8bbb90cba8f4'
+      tableAttributes:
+        - status
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: true
+      key: 'group:6e70ce52-e398-436d-9a87-955ddb91e70e'
+      tableAttributes:
+        - status
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: structure
+      disabled: true
+      key: 'group:d09efc85-65d3-414b-8f8c-5422e1574cfe'
+      tableAttributes:
+        - status
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: true
+      key: 'group:3fbca60c-c8cc-400e-ae71-2b833140cedd'
+      tableAttributes:
+        - status
+        - link
+      type: native
+email:
+  fromEmail: gregsternik07@gmail.com
+  fromName: mywebsite
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  assets:
+    hasUrls: true
+    name: Assets
+    settings:
+      path: 'C:/xampp/htdocs/craftcms/web/uploads/assets'
+    type: craft\fs\Local
+    url: 'http://localhost/craftcms/web/uploads/assets/'
+meta:
+  __names__:
+    43d4c7a2-cd9d-46af-b86f-877820578614: Category # Category
+    90a7169e-15c3-40d2-9153-d117ac9bf0d2: Description # Description
+    99e89e8c-2f81-4d8c-8b2c-69103d90aac1: Colour # Colour
+    275a9cff-d3a5-4be7-b9b8-c0a50483b9f7: 'Attraction Categories' # Attraction Categories
+    974b68f1-a93a-457b-9ad8-bbe545db2570: 'Public Schema' # Public Schema
+    1264d574-2584-463c-ab24-7619f2f65aa3: Attraction # Attraction
+    44449a1a-7458-4625-9361-a7af0b55e56f: Attractions # Attractions
+    1718735a-958d-412d-89f5-7c112232edff: mywebsite # mywebsite
+    63202292-59a4-4ab4-99f0-1b9dd44a21a6: Images # Images
+    c5d850e9-72ca-44a4-be22-17219e818e5d: 'Destination Explorer' # Destination Explorer
+    ccec9a0b-e550-4cb1-99b5-d846601875b1: 'Attraction Image' # Attraction Image
+system:
+  edition: solo
+  live: true
+  name: mywebsite
+  schemaVersion: 5.6.0.2
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

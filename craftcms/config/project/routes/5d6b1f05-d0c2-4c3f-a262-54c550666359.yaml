@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 1
+template: destination-explorer.twig
+uriParts:
+  - destination-explorer
+uriPattern: destination-explorer

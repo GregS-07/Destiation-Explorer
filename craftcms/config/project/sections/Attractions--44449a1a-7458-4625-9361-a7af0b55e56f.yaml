@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 1264d574-2584-463c-ab24-7619f2f65aa3 # Attraction
+handle: Attractions
+maxAuthors: 1
+name: Attractions
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  c5d850e9-72ca-44a4-be22-17219e818e5d: # Destination Explorer
+    enabledByDefault: true
+    hasUrls: true
+    template: destination-explorer.twig
+    uriFormat: 'destination-explorer/{slug}'
+type: channel

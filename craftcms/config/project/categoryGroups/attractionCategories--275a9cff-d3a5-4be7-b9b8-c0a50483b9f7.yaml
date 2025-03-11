@@ -1,0 +1,66 @@
+defaultPlacement: end
+fieldLayouts:
+  fe38b789-8d2f-4348-967e-4f186594b4b3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-02-21T21:47:28+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 2ace36a8-8e56-411e-8b75-bbafa6ffa361
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T23:06:33+00:00'
+            elementCondition: null
+            fieldUid: 99e89e8c-2f81-4d8c-8b2c-69103d90aac1 # Colour
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6f93b13-7ec4-4c30-9fc5-3bbd3aebd00c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d451ef8b-9e40-4dc7-b805-1d27862452f8
+        userCondition: null
+handle: attractionCategories
+name: 'Attraction Categories'
+siteSettings:
+  c5d850e9-72ca-44a4-be22-17219e818e5d: # Destination Explorer
+    hasUrls: true
+    template: attractions/_category.twig
+    uriFormat: 'attractions/{slug}'
+structure:
+  maxLevels: null
+  uid: baf07778-f878-45bb-991f-a1235d2ab7e7
